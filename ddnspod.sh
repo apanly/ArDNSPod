@@ -13,6 +13,9 @@ case $(uname) in
     echo "Linux"
     arIpAddress() {
         local extip
+	# Curl 纯文本格式输出:
+	# icanhazip.com
+	# http://ipecho.net/plain
 	extip=`wget http://ipecho.net/plain -O - -q ; echo`
         echo $extip
     }
