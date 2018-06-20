@@ -17,28 +17,6 @@ case $(uname) in
         echo $extip
     }
     ;;
-  'FreeBSD')
-    echo 'FreeBSD'
-    exit 100
-    ;;
-  'WindowsNT')
-    echo "Windows"
-    exit 100
-    ;;
-  'Darwin')
-    echo "Mac"
-    arIpAddress() {
-        ifconfig | grep "inet " | grep -v 127.0.0.1 | awk '{print $2}'
-    }
-    ;;
-  'SunOS')
-    echo 'Solaris'
-    exit 100
-    ;;
-  'AIX')
-    echo 'AIX'
-    exit 100
-    ;;
   *) ;;
 esac
 
